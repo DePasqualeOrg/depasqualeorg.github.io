@@ -13,7 +13,6 @@ from datetime import datetime
 import pytz
 import os
 import subprocess
-from os import path
 
 utc = pytz.utc
 time_format = '%Y-%m-%d %H:%M:%S %z'
@@ -43,7 +42,7 @@ if notebook_previously_updated is None or notebook_updated > notebook_previously
     git_path = '/usr/bin/git'
     website_repo = Path('/home/ubuntu/a-dpq.github.io/')
     website_root = website_repo / 'docs'
-    notebook_dest_path = path.join(website_root, 'ark-fund-analysis/index.html')
+    notebook_dest_path = website_root / 'ark-fund-analysis/index.html'
     timestamp = datetime.now().astimezone(utc).strftime(time_format) # Equivalent shell command: date -u +"%Y-%m-%d %H:%M:%S %z"
 
     command = f"cd {website_repo} && {git_path} pull && cp '{exported_notebook_path}' '{notebook_dest_path}' && {git_path} add -A && {git_path} commit -m 'Update {timestamp}' && {git_path} push"

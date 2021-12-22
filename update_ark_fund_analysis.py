@@ -31,7 +31,7 @@ else:
 
 if notebook_exported is None or website_updated is None or notebook_exported > website_updated:
     git_path = '/usr/bin/git'
-    website_repo = Path('/home/ubuntu/depasqualexyz.github.io/')
+    website_repo = Path('/home/ubuntu/depasqualeorg.github.io/')
     website_root = website_repo / 'docs'
     notebook_dest_path = website_root / 'ark-fund-analysis/index.html'
     timestamp = datetime.now().astimezone(utc).strftime(time_format) # Equivalent shell command: date -u +"%Y-%m-%d %H:%M:%S %z"

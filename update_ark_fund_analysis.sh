@@ -14,6 +14,8 @@ GIT_PATH=/usr/bin/git
 ARK_FUND_ANALYSIS=/home/ubuntu/ark_fund_analysis
 WEBSITE_REPO=/home/ubuntu/depasqualeorg.github.io
 
+# Update ark_fund_analysis
+cd $ARK_FUND_ANALYSIS && $GIT_PATH pull
 # Check for new data and export the notebook
 cd $ARK_FUND_ANALYSIS && $PYTHON_PATH cron_export_notebook.py
 # Upload exported notebook to website

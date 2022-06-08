@@ -2,3 +2,5 @@
 node_modules/
 .sass-cache/
 ignore/
+package-lock.json
+pnpm-lock.yaml
